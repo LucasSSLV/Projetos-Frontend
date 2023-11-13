@@ -3,7 +3,14 @@ import "./index.css";
 
 function App() {
   return (
-    <div className='divCentral'>
+    <div
+      className={`
+    flex 
+    items-center 
+    justify-center 
+    h-screen
+    `}
+    >
       <Form />
     </div>
   );

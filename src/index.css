@@ -10,10 +10,20 @@ body {
   justify-content: center;
 }
 
-body {
-    background: pink
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.divCentral {
-    background: rgb(233, 53, 53);
+body {
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s infinite;
+  background-image: linear-gradient(-45deg, #ff9ece, #8e7cc3, #dca4a4, #e65959);
 }

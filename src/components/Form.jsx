@@ -38,12 +38,23 @@ export default function Form() {
   };
 
   return (
-    <div>
-      <h1>Preencha o Formulário</h1>
-      <form>
-        Nome:
+    <div
+      className={`
+    border
+    rounded-md
+    px-3 py-1
+    `}
+    >
+      <form
+        className={`
+    font-mono
+    text-xl
+      `}
+      >
+        Nome
         <br />
         <input
+          className="border rounded-md"
           type="text"
           name="name"
           placeholder="Primeiro nome"
@@ -51,9 +62,10 @@ export default function Form() {
           onChange={handleChange}
         />
         <br />
-        Sobrenome:
+        Sobrenome
         <br />
         <input
+          className="border rounded-md"
           type="text"
           name="sobrenome"
           placeholder="Sobrenome"
@@ -61,9 +73,10 @@ export default function Form() {
           onChange={handleChange}
         />
         <br />
-        Email:
+        Email
         <br />
         <input
+          className="border rounded-md"
           type="email"
           name="email"
           placeholder="Email"
@@ -71,9 +84,10 @@ export default function Form() {
           onChange={handleChange}
         />
         <br />
-        Senha:
+        Senha
         <br />
         <input
+          className="border rounded-md"
           type="password"
           name="senha"
           placeholder="Senha"
@@ -82,7 +96,30 @@ export default function Form() {
         />
         <br />
       </form>
-      <button onClick={handleClick}>Cadastrar</button>
+
+      {/* <div className=" items-center"> */}
+      <button
+        className={`
+        flex
+        items-center
+        justify-center
+         font-serif
+         text-center
+         ml-20
+         mt-5
+         mb-1
+         p-0
+         w-20
+         border
+         rounded-md
+        bg-slate-100
+         hover:bg-amber-50 transition duration-100
+         `}
+        onClick={handleClick}
+      >
+        Cadastrar
+      </button>
+      {/* </div> */}
     </div>
   );
 }
