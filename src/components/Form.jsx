@@ -34,15 +34,21 @@ export default function Form() {
     localStorage.setItem("sobrenome", sobrenome);
     localStorage.setItem("email", email);
     localStorage.setItem("senha", senha);
+
+    setName("");
+    setSobrenome("");
+    setEmail("");
+    setSenha("");
     return alert("Seus dados foram enviados com sucesso!");
   };
 
   return (
     <div
       className={`
-    border
     rounded-md
     px-3 py-1
+    bg-white bg-opacity-25
+    focus:outline-none
     `}
     >
       <form
@@ -54,7 +60,15 @@ export default function Form() {
         Nome
         <br />
         <input
-          className="border rounded-md"
+          className={`
+          font-serif
+          text-center
+          m-1
+          rounded-md
+          transition
+          bg-slate-200
+          hover:bg-yellow-50
+          `}
           type="text"
           name="name"
           placeholder="Primeiro nome"
@@ -65,7 +79,16 @@ export default function Form() {
         Sobrenome
         <br />
         <input
-          className="border rounded-md"
+          className={`
+          font-serif
+          text-center
+          m-1
+          rounded-md
+          transition
+          bg-slate-200
+          hover:bg-yellow-50
+          focus:outline-none
+          `}
           type="text"
           name="sobrenome"
           placeholder="Sobrenome"
@@ -76,7 +99,16 @@ export default function Form() {
         Email
         <br />
         <input
-          className="border rounded-md"
+          className={`
+          font-serif
+          text-center
+          m-1
+          rounded-md
+          transition
+          bg-slate-200
+          hover:bg-yellow-50
+          focus:outline-none
+        `}
           type="email"
           name="email"
           placeholder="Email"
@@ -87,7 +119,16 @@ export default function Form() {
         Senha
         <br />
         <input
-          className="border rounded-md"
+          className={`
+        font-serif
+        text-center
+        m-1
+        rounded-md
+        transition
+        bg-slate-200
+        hover:bg-yellow-50
+        focus:outline-none
+       `}
           type="password"
           name="senha"
           placeholder="Senha"
@@ -97,7 +138,6 @@ export default function Form() {
         <br />
       </form>
 
-      {/* <div className=" items-center"> */}
       <button
         className={`
         flex
@@ -114,12 +154,13 @@ export default function Form() {
          rounded-md
         bg-slate-100
          hover:bg-amber-50 transition duration-100
+         cursor-pointer
+         
          `}
         onClick={handleClick}
       >
         Cadastrar
       </button>
-      {/* </div> */}
     </div>
   );
 }
